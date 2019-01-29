@@ -11,6 +11,9 @@
 
   <script src="js/index.js" async></script>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -20,7 +23,7 @@
 
   <header class="main-navigation">
     <div class="container nav-container">
-      <h1 class="logo-heading">Fun Bus</h1>
+      <h1 id="title" class="logo-heading">Fun Bus</h1>
       <nav class="nav">
         <a class="nav-link" href="#">Home</a>
         <a class="nav-link" href="#">About Us</a>
@@ -31,7 +34,12 @@
   </header>
      
   <div class="container home">
+
     <header class="intro">
+      <div id="bus-container">
+          <span id="bus" class="fa-4x fas fa-bus-alt"></span>
+          <span id="place" class="fa-4x fas fa-city"></span>
+      </div>
       <img src="img/fun-bus.jpg" alt="bus in the sand">
       <h2>Welcome To Fun Bus!</h2>
       <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
@@ -85,6 +93,8 @@
   <footer class="footer">
     <p>Copyright Fun Bus 2018</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
 </body>
 </html>
