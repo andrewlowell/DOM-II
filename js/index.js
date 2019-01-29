@@ -6,6 +6,7 @@ const place = document.getElementById('place');
 const links = Array.from(document.getElementsByTagName('a'));
 const buttons = Array.from(document.getElementsByClassName('btn'));
 const title = document.getElementById('title');
+const navi = document.getElementById('navi');
 
 let hoverBus = false;
 const options = ['fa-city', 'fa-university', 'fa-mosque', 'fa-synagogue', 'fa-school', 'fa-hospital', 'fa-hotel', 'fa-warehouse'];
@@ -53,12 +54,18 @@ window.onkeyup = function() {
   title.style.color = 'black';
 }
 window.oncontextmenu = function() {
-  alert('No rest for the weary, dude :P');
+  alert('Whatcha doin\'?');
 }
 links.forEach(l => {
   l.addEventListener('click', e => {
     l.style.display = 'none';
+    e.preventDefault();
+    e.stopPropagation();
   });
+  
+});
+navi.addEventListener('click', e => {
+  navi.style.display = 'none';
 });
 document.addEventListener('copy', e => {
   e.clipboardData.setData('text/plain', 'Oh no you didn\'t!');
